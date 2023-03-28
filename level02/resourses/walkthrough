@@ -1,0 +1,8 @@
+from the outer system space:
+scp -P 4242 level02@<snow_crash VM IP adress>:/home/user/level02/level02.pcap .
+chmod 777 ./level02.pcap
+wireshark ./level02.pcap -> Password: ft_wandr...NDRel.L0L (right click on package - follow - tcp stream)
+but 7F is delete so:
+su flag02
+ft_waNDReL0L
+getflag

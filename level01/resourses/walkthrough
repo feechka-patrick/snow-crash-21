@@ -1,0 +1,7 @@
+cat /etc/passwd
+echo 42hDRfypTqqnw > file_for_john
+sudo apt-get install john -y
+john file_for_john
+su flag01
+abcdefg
+getflag

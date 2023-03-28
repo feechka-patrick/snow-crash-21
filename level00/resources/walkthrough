@@ -1,0 +1,5 @@
+find / -user flag00 2>/dev/null
+decrypt with ceasar at https://www.dcode.fr/chiffre-cesar with 15 shift
+su flag00
+nottoohardhere
+getflag

