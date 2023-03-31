@@ -1,0 +1,9 @@
+the binary wants the user ID to be 4242 instead of 2013
+gdb ./level13
+disas main
+b *0x0804859a
+r
+info registers
+set $eax=4242
+info registers
+c
